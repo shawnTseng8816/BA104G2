@@ -1,0 +1,27 @@
+﻿package:	com.store_profile.controller
+
+>	InitServlet (load on startup)
+>	從/front-end/data/key.txt 讀關鍵字	
+>	排程器：5分鐘抓一次評價(store_comment)分數
+
+>	IndexServlet 地址轉經緯度和距離
+>	StoreProfileVO裡面有多加三個屬性暫存：	
+		private Double lat;
+		private Double lng;
+		private Double distance;
+
+------------------------------------
+
+package:	temp
+
+>	fackLogin
+>	後臺人員登入時要在 session 設權限清單 authList
+>	back-end/back-left	JavaScript 根據  authList 顯示左邊功能按鈕
+
+------------------------------------
+
+package:	com.backstage_management.controller
+
+>	BMServlet 第151行 新增後臺員工成功寄密碼通知信 目前是先註解掉 
+
+------------------------------------

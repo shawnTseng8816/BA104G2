@@ -1,0 +1,108 @@
+		body{
+				font-family: Microsoft JhengHei, Gotham;
+				color:#595942;/*�`���V��*/
+				padding-top:70px;
+				padding-bottom: 70px;
+				
+			}
+			p ,span {
+				font-size: 10pt;
+				margin: 0px 0px 5px 0px;
+				color:#DCE6D2;
+			}
+
+			.navbars{
+				background-color: #595942; /*�`���V��*/
+			}
+
+			.item-color{
+				color:#DCE6D2;
+			}
+			.item-color:hover{
+				color:#FFFFFF;
+				font-size:border;
+				text-decoration:none;
+			}
+			.area50{
+				margin-top: 50px;
+			}
+			.area20{
+				margin-top: 10px;
+				margin-buttom: 10px;
+			}
+			.area70{
+				margin-top: 70px;
+				margin-buttom: 35px;
+			}
+			.mgrb{
+				margin: 10px ;
+			}
+			
+			.btn-green{
+				background:#595942; 
+				color:#FFFFFF;
+
+			}
+			.btn-green:hover{
+				background:#DCE6D2; 
+				color:#3C9682;
+				font-weight:border;
+				border:1px solid #FFFFFF;
+			}
+			
+			.btn-org{
+				background: #FA5532; /*���der*/
+				color:#FFFFFF;
+			}
+			.btn-org:hover{
+				background: #FA5532;
+				color:#FFFFFF;
+			}
+
+			.icons{
+				padding:0px 10px 0px 0px;
+			}
+
+			.imgsize{
+				border-radius: 100px;
+			}
+
+			.funcbtn-normal{
+				color:#595942;/*���V��*/	
+			}
+
+			.panelheight{
+				border-color: #CCCCCC;
+				height:1500px; 
+			}
+			
+			#checkicon{
+				color:#FA5532;
+			}
+			
+			.active{
+				background-color:#3C9682;
+			}
+			.page-brand{
+				margin-left: 45px;
+			}
+			a:hover{
+				text-decoration:none;
+			}
+			.table {				
+				background-color: white;
+				margin-top: 5px;
+				margin-bottom: 100px;
+			}
+			
+			th, td {
+			  padding: 5px;
+			  text-align: center;
+			  vertical-align:middle;
+			}
+			input[type=checkbox]{
+				transform: scale(1.3);
+			}
+
+			
+			

@@ -1,0 +1,38 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%  int rowsPerPage1 = 4;  
+    int rowNumber1=0;     
+    int pageNumber1=0;        
+    int whichPage1=1;      
+    int pageIndexArray1[]=null;
+    int pageIndex1=0; 
+%>
+
+<%  
+    rowNumber1=listCommentDetailMem.size();
+    if (rowNumber1%rowsPerPage1 !=0)
+         pageNumber1=rowNumber1/rowsPerPage1 + 1;
+    else pageNumber1=rowNumber1/rowsPerPage1;    
+
+    pageIndexArray1=new int[pageNumber1]; 
+    for (int i=1 ; i<=pageIndexArray1.length ; i++)
+         pageIndexArray1[i-1]=i*rowsPerPage1-rowsPerPage1;
+%>
+
+<%  try {
+       whichPage1 = Integer.parseInt(request.getParameter("whichPage1"));
+       pageIndex1=pageIndexArray1[whichPage1-1];
+    } catch (NumberFormatException e) { 
+       whichPage1=1;
+       pageIndex1=0;
+    } catch (ArrayIndexOutOfBoundsException e) { 
+         if (pageNumber1>0){
+              whichPage1=pageNumber1;
+              pageIndex1=pageIndexArray1[pageNumber1-1];
+         }
+    } 
+%>
+<%if (pageNumber1>0){%>
+  <b><font color=red>第<%=whichPage1%>/<%=pageNumber1%>頁</font></b>
+<%}%>
+
+<b> ● 符 合 查 詢 條 件 如 下 所 示: 共<font color=red><%=rowNumber1%></font>筆</b>

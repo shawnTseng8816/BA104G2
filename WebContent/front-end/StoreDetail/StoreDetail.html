@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META name="GENERATOR" content="IBM Software Development Platform">
+<META http-equiv="Content-Style-Type" content="text/css">
+<LINK href="theme/Master.css" rel="stylesheet" type="text/css">
+<TITLE>form.html</TITLE>
+</HEAD>
+<BODY>
+<!-- 用Session傳 -->
+  <FORM METHOD="get" ACTION="/BA104G2/SessionSetStoreDetail">
+      
+     會員編號登入
+    <INPUT TYPE="TEXT" NAME="mem_num" ><p>
+    <INPUT TYPE="SUBMIT">
+  </FORM>
+  
+  <FORM METHOD="get" ACTION="/BA104G2/SessionSetStoreDetail">
+    
+     店家編號登入
+    <INPUT TYPE="TEXT" NAME="sto_num"><p>
+    <INPUT TYPE="SUBMIT">
+  </FORM>
+  
+  <FORM METHOD="get" ACTION="/BA104G2/SessionSetStoreDetail">
+   
+     後台編號登入
+    <INPUT TYPE="TEXT" NAME="mem_bn_no"><p>
+    <INPUT TYPE="SUBMIT">
+  </FORM>
+<!-- 用request傳 -->
+   
+	<FORM METHOD="get" ACTION="/BA104G2/store_detail/store_detail.do">
+      
+     前往的店家編號
+    <INPUT TYPE="TEXT" NAME="sto_num" VALUE="ST0000000001"><p>
+    <INPUT TYPE="SUBMIT">
+  </FORM>
+
+
+</BODY>
+</HTML>

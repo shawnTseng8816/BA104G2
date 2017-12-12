@@ -1,0 +1,53 @@
+﻿/****************************************************************
+ *																*		
+ * 						      代码库							*
+ *                        www.dmaku.com							*
+ *       		  努力创建完善、持续更新插件以及模板			*
+ * 																*
+****************************************************************/
+body{background:#fff}
+.main {
+width: 200px;
+margin: 0 auto;
+}
+
+.item1 {
+height: 150px;
+position: relative;
+padding: 30px;
+text-align: center;
+-webkit-transition: top 1.2s linear;
+transition: top 1.2s linear;
+}
+
+.item1 .kodai {
+position: absolute;
+bottom: 0;
+cursor: pointer;
+}
+
+.item1 .kodai .full {
+display: block;
+}
+
+.item1 .kodai .empty {
+display: none;
+}
+
+.item1 .clipped-box {
+display: none;
+position: absolute;
+bottom: 40px;
+left: 80px;
+height: 540px;
+width: 980px;
+}
+
+.item1 .clipped-box img {
+position: absolute;
+top: auto;
+left: 0;
+bottom: 0;
+-webkit-transition: -webkit-transform 1.4s ease-in, background 0.3s ease-in;
+transition: transform 1.4s ease-in;
+}

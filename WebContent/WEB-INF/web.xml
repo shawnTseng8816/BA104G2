@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.4">
+	<display-name>BA104G2</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<resource-ref>
+		<description>DB Connection</description>
+		<res-ref-name>jdbc/BA104G2</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+<!--  KAHN  -->  	
+	<context-param>
+	    <param-name>org.apache.tomcat.websocket.textBufferSize</param-name>
+	    <param-value>614400</param-value>
+  	</context-param>
+
+	<listener>
+		<listener-class>login.test.LoginListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>FriendListController</servlet-name>
+		<servlet-class>com.friend_list.controller.FriendListController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FriendListController</servlet-name>
+		<url-pattern>/FriendList/FLC.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MemberProfileController</servlet-name>
+		<servlet-class>com.member_profile.controller.MemberProfileController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemberProfileController</servlet-name>
+		<url-pattern>/MemberProfile/MPC.html</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>MergedOrderController</servlet-name>
+		<servlet-class>com.merged_order.controller.MergedOrderController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MergedOrderController</servlet-name>
+		<url-pattern>/MergedOrder/MOC.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StoreCommentController</servlet-name>
+		<servlet-class>com.store_comment.controller.StoreCommentController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StoreCommentController</servlet-name>
+		<url-pattern>/StoreComment/SCC.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GroupBuyController</servlet-name>
+		<servlet-class>com.group_buy.controller.GroupBuyController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GroupBuyController</servlet-name>
+		<url-pattern>/GroupBuy/GBC.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>FavoriteStoreController</servlet-name>
+		<servlet-class>com.favorite_store.controller.FavoriteStoreController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FavoriteStoreController</servlet-name>
+		<url-pattern>/FavoriteStore/FSC.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>OrderMasterController</servlet-name>
+		<servlet-class>com.order_master.controller.OrderMasterController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderMasterController</servlet-name>
+		<url-pattern>/OrderMaster/OMC.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>OrderDetailController</servlet-name>
+		<servlet-class>com.order_detail.controller.OrderDetailController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderDetailController</servlet-name>
+		<url-pattern>/OrderDetail/ODC.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Session_Set</servlet-name>
+		<servlet-class>login.test.Session_Set</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Session_Set</servlet-name>
+		<url-pattern>/Session_Set</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>myTestDataSource</servlet-name>
+		<servlet-class>com.friend_list.model.Test_DataSource</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myTestDataSource</servlet-name>
+		<url-pattern>/myTestDataSource</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetPic</servlet-name>
+		<servlet-class>login.test.GetPic</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetPic</servlet-name>
+		<url-pattern>/getPic</url-pattern>
+	</servlet-mapping>
+	
+	
+<!-- end KAHN  -->  	
+	
+	
+	
+<!-- Peiiun  -->  	
+	<!-- 店家商品管理  product -->  
+  <servlet>
+    <servlet-name>ProductServlet</servlet-name>
+    <servlet-class>com.product.controller.ProductServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductServlet</servlet-name>
+    <url-pattern>/pdc_mng/StoPdcMng.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SweetnessServlet</servlet-name>
+    <servlet-class>com.sweetness.controller.SweetnessServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SweetnessServlet</servlet-name>
+    <url-pattern>/pdc_mng/StoSwtMng.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>IceListServlet</servlet-name>
+    <servlet-class>com.ice_list.controller.IceListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IceListServlet</servlet-name>
+    <url-pattern>/pdc_mng/StoIceMng.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ExtraServlet</servlet-name>
+    <servlet-class>com.exrta.controller.ExtraServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExtraServlet</servlet-name>
+    <url-pattern>/pdc_mng/StoExtMng.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PdcGifReader</servlet-name>
+    <servlet-class>com.product.controller.PdcGifReader</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PdcGifReader</servlet-name>
+    <url-pattern>/PdcGifReader</url-pattern>
+  </servlet-mapping>
+ 
+<!-- 後臺人員管理  backstage management --> 
+  <servlet>
+    <servlet-name>BackstageManagementServlet</servlet-name>
+    <servlet-class>com.backstage_management.controller.BackstageManagementServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BackstageManagementServlet</servlet-name>
+    <url-pattern>/bks_mng/BksMng.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>BmGifReader</servlet-name>
+    <servlet-class>com.backstage_management.controller.BmGifReader</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BmGifReader</servlet-name>
+    <url-pattern>/BmGifReader</url-pattern>
+  </servlet-mapping>
+  
+  
+<!-- 首頁  store profile --> 
+  <servlet>
+    <servlet-name>IndexServlet</servlet-name>
+    <servlet-class>com.store_profile.controller.IndexServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndexServlet</servlet-name>
+    <url-pattern>/index/IndexServlet.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InitTrigger</servlet-name>
+    <servlet-class>com.store_profile.controller.InitTrigger</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitTrigger</servlet-name>
+    <url-pattern>/index/InitTrigger.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>StoGifReader</servlet-name>
+    <servlet-class>com.store_profile.controller.StoGifReader</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StoGifReader</servlet-name>
+    <url-pattern>/StoGifReader</url-pattern>
+  </servlet-mapping>
+<!-- end Peiiun  -->  	  
+  
+  
+<!-- Chi -->  	  
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>BackstageManagementServletChi</display-name>
+  	<servlet-name>BackstageManagementServletChi</servlet-name>
+  	<servlet-class>com.backstage_management.controller.BackstageManagementServletChi</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>BackstageManagementServletChi</servlet-name>
+  	<url-pattern>/back-end/backstagemanagement/BackstageManagementServletChi</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>MemberProfileServlet</servlet-name>
+    <servlet-class>com.member_profile.controller.MemberProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberProfileServlet</servlet-name>
+    <url-pattern>/front-end/memberprofile/mem.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>StoreProfileServlet</servlet-name>
+    <servlet-class>com.store_profile.controller.StoreProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StoreProfileServlet</servlet-name>
+    <url-pattern>/store-end/storeprofile/sto.do</url-pattern>
+  </servlet-mapping>
+
+  
+  <servlet>
+    <servlet-name>GetPicServlet</servlet-name>
+    <servlet-class>com.getpic.controller.GetPicServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetPicServlet</servlet-name>
+    <url-pattern>/GetPic</url-pattern>
+  </servlet-mapping>
+<!-- end Chi -->    
+  
+  
+<!-- Shawn -->  
+  <servlet>
+    <servlet-name>SessionSetReportMember</servlet-name>
+    <servlet-class>com.set_session.model.SessionSetReportMember</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionSetReportMember</servlet-name>
+    <url-pattern>/SessionSetReportMember</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SessionSetReportStore</servlet-name>
+    <servlet-class>com.set_session.model.SessionSetReportStore</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionSetReportStore</servlet-name>
+    <url-pattern>/SessionSetReportStore</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SessionSetStoreDetail</servlet-name>
+    <servlet-class>com.set_session.model.SessionSetStoreDetail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionSetStoreDetail</servlet-name>
+    <url-pattern>/SessionSetStoreDetail</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SessionSetMemberDetail</servlet-name>
+    <servlet-class>com.set_session.model.SessionSetMemberDetail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionSetMemberDetail</servlet-name>
+    <url-pattern>/SessionSetMemberDetail</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SessionSetKeepRecord</servlet-name>
+    <servlet-class>com.set_session.model.SessionSetKeepRecord</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionSetKeepRecord</servlet-name>
+    <url-pattern>/SessionSetKeepRecord</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SessionSetMemContent</servlet-name>
+    <servlet-class>com.set_session.model.SessionSetMemContent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionSetMemContent</servlet-name>
+    <url-pattern>/SessionSetMemContent</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SessionSetStoContent</servlet-name>
+    <servlet-class>com.set_session.model.SessionSetStoContent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SessionSetStoContent</servlet-name>
+    <url-pattern>/SessionSetStoContent</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>StoreDetailServlet</servlet-name>
+    <servlet-class>com.store_detail.controller.StoreDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StoreDetailServlet</servlet-name>
+    <url-pattern>/store_detail/store_detail.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>KeepRecordSearch</servlet-name>
+    <servlet-class>com.keep_record.controller.KeepRecordSearch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>KeepRecordSearch</servlet-name>
+    <url-pattern>/keepRecordSearch/keepRecordSearch.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>MemberDetailServlet</servlet-name>
+    <servlet-class>com.member_detail.controller.MemberDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberDetailServlet</servlet-name>
+    <url-pattern>/member_detail/member_detail.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TestGet</servlet-name>
+    <servlet-class>com.store_detail.controller.TestGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestGet</servlet-name>
+    <url-pattern>/TestGet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GetPicShawn</servlet-name>
+    <servlet-class>com.getpic.model.GetPic</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetPicShawn</servlet-name>
+    <url-pattern>/GetPicShawn</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>SearchProfile</servlet-name>
+    <servlet-class>com.search_profile.controller.SearchProfile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchProfile</servlet-name>
+    <url-pattern>/searchProfile/searchProfile.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ContentStore</servlet-name>
+    <servlet-class>com.content.controller.ContentStore</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContentStore</servlet-name>
+    <url-pattern>/contentStore/contentStore.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ContentMember</servlet-name>
+    <servlet-class>com.content.controller.ContentMember</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ContentMember</servlet-name>
+    <url-pattern>/contentMember/contentMember.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ReportStore</servlet-name>
+    <servlet-class>com.report.controller.ReportStore</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReportStore</servlet-name>
+    <url-pattern>/reportStore/reportStore.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ReportMember</servlet-name>
+    <servlet-class>com.report.controller.ReportMember</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ReportMember</servlet-name>
+    <url-pattern>/reportMember/reportMember.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Comment</servlet-name>
+    <servlet-class>com.comment.controller.Comment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Comment</servlet-name>
+    <url-pattern>/comment/comment.do</url-pattern>
+  </servlet-mapping>
+  
+ <!--  end Shawn --> 
+  
+  
+ <!--  Eric  -->  	
+ <servlet>
+  	<description>
+  	</description>
+  	<display-name>StoreProfileServletEric</display-name>
+  	<servlet-name>StoreProfileServletEric</servlet-name>
+  	<servlet-class>com.store_profile.controller.StoreProfileServletEric</servlet-class>
+  </servlet>
+ <servlet-mapping>
+  	<servlet-name>StoreProfileServletEric</servlet-name>
+  	<url-pattern>/StoreProfileServletEric</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CouponServlet</servlet-name>
+    <servlet-class>com.coupon.controller.CouponServlet</servlet-class>
+    <load-on-startup>10</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CouponServlet</servlet-name>
+    <url-pattern>/CouponServlet</url-pattern>
+  </servlet-mapping>
+  
+
+
+  <servlet>
+    <servlet-name>loginCL</servlet-name>
+    <servlet-class>loginCL</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginCL</servlet-name>
+    <url-pattern>/loginCL</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>addPoint</servlet-name>
+    <servlet-class>com.value_record.controller.Value_RecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addPoint</servlet-name>
+    <url-pattern>/addPoint</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RemRecordServlet</servlet-name>
+    <servlet-class>com.rem_record.controller.RemRecordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemRecordServlet</servlet-name>
+    <url-pattern>/RemRecordServlet</url-pattern>
+  </servlet-mapping>
+  
+
+  
+  <servlet>
+    <servlet-name>CouponListServlet</servlet-name>
+    <servlet-class>com.coupon_list.controller.CouponListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CouponListServlet</servlet-name>
+    <url-pattern>/CouponListServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>GetPicEric</servlet-name>
+    <servlet-class>GetPic</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetPicEric</servlet-name>
+    <url-pattern>/GetPicEric</url-pattern>
+  </servlet-mapping>
+ 
+  
+  
+  
+ <!--  end Eric -->  
+ 
+  <servlet>
+	  	<description>
+	  	</description>
+	  	<display-name>Store</display-name>
+	  	<servlet-name>Store</servlet-name>
+	  	<servlet-class>com.android.store.controller.Store</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+	  	<servlet-name>Store</servlet-name>
+	  	<url-pattern>/android/Store</url-pattern>
+	  </servlet-mapping>
+	  
+	  
+</web-app>
